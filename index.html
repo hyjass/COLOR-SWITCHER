@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                box-sizing: border-box;
+                padding: 0%;
+                margin: 0%;
+            }
+
+            body{
+                background-color: #212121;
+                color: #fff;
+            }
+            p,h1{
+                font-weight: 500;
+                color: #fff;
+                padding: 25px;
+                margin: 10px;
+                text-align: center;
+            }
+            .buttons{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 50px 50px;
+                gap: 10px;
+                padding: 25px;
+                margin: auto;
+                width: 50vh;                
+            }
+            #red{
+                background: red;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+            #yellow{
+                background-color: yellow;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+            #grey{
+                background-color: grey;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+            #blue{
+                background-color: blue;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+            #green{
+                background-color: green;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+            #pink{
+                background-color: pink;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <h1>COLOR SCHEME SWITCHER</h1>
+        <div class="buttons">
+            <button class="btn" id="red"></button>
+            <button class="btn" id="yellow"></button>     
+            <button class="btn" id="grey"></button>
+            <button class="btn" id="blue"></button>
+            <button class="btn" id="green"></button>
+            <button class="btn" id="pink"></button>
+        </div>
+        <p>CLICKING ON ABOVE BUTTONS WILL CHANGE THE BACKGROUND COLOR</p>
+        
+        
+    </body>
+    <script>
+        const btns=document.querySelectorAll('.buttons');
+        const body=document.querySelector('body');
+        btns.forEach(function(buttons){
+            buttons.addEventListener('click',(e) => {
+            body.style.backgroundColor=e.target.id;
+
+        })
+    })
+       
+        
+
+    </script>
+</html>
